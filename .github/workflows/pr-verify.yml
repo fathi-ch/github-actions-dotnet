@@ -27,3 +27,6 @@ jobs:
       
       - name: DotNet Test
         run: dotnet test --configuration Release --no-build
+      
+      - name: DotNet Fromatting
+        run: dotnet format -v detailed --verify-no-changes
