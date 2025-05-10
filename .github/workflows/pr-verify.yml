@@ -20,10 +20,13 @@ jobs:
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0
+          dotnet-version: 9.0
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
       
       - name: DotNet Test
         run: dotnet test --configuration Release --no-build
+      
+      - name: DotNet Fromatting
+        run: dotnet format -v detailed --verify-no-changes
