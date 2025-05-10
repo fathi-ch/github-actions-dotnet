@@ -1,13 +1,13 @@
-name: Run every minute
-               # set this to the .NET Core version to use
+name: Run once a day minute
+
 on:
+ workflow_dispatch:
  schedule:
-    - cron: "*/5 * * * *"
-    
+    - cron: "1 1 * * *"
 
 jobs:
   cron:
-    name: Run every 5 minutes
+    name: Run once a day minute
     runs-on: ubuntu-latest
 
     steps:
